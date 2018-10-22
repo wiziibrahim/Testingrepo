@@ -1,0 +1,100 @@
+
+*********Pushing a local file to the cloud***********
+
+create a new visual studio solution
+copy the solution folder to the local repository on your machine
+click on team explorer to connect to the cloud repositiory you want to commit the file into
+click on file to open the solution you just copied to the local directory
+once opened go to changes and enter text description of some sort
+click sync to share the file
+click push to push the file to the cloud repository
+
+
+******************using git***************************
+
+Stella@StellaMarisco MINGW64 ~/source/repos/Ibrahim (master)
+I added a new text file testing.txt in the above directory then typed git status as below
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        testing.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Stella@StellaMarisco MINGW64 ~/source/repos/Ibrahim (master)
+$ git add --all
+
+Stella@StellaMarisco MINGW64 ~/source/repos/Ibrahim (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   testing.txt
+
+
+Stella@StellaMarisco MINGW64 ~/source/repos/Ibrahim (master)
+$ git commit -m"added text file"
+[master e088240] added text file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 testing.txt
+
+Stella@StellaMarisco MINGW64 ~/source/repos/Ibrahim (master)
+$ git push origin master
+fatal: NullReferenceException encountered.
+   Object reference not set to an instance of an object.
+Username for 'https://team-msc-2018.visualstudio.com': acheneje.ibrahim@yahoo.co.uk
+fatal: NullReferenceException encountered.
+   Object reference not set to an instance of an object.
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 276 bytes | 138.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Analyzing objects... (3/3) (117 ms)
+remote: Storing packfile... done (139 ms)
+remote: Storing index... done (40 ms)
+To https://team-msc-2018.visualstudio.com/Ibrahim/_git/Ibrahim
+   9565b54..e088240  master -> master
+
+Stella@StellaMarisco MINGW64 ~/source/repos/Ibrahim (master)
+$
+********************************************************************************
+********************************************************************************
+Go to the remote repository "Ibrahim" and edit the text file then commit it
+use git fetch && pull origin master to see the changes in git
+
+Stella@StellaMarisco MINGW64 ~/source/repos/Ibrahim (master)
+$ git fetch && git pull origin master
+fatal: NullReferenceException encountered.
+   Object reference not set to an instance of an object.
+Username for 'https://team-msc-2018.visualstudio.com': acheneje.ibrahim@yahoo.co.uk
+fatal: NullReferenceException encountered.
+   Object reference not set to an instance of an object.
+remote: Azure Repos
+remote: Found 3 objects to send. (38 ms)
+Unpacking objects: 100% (3/3), done.
+From https://team-msc-2018.visualstudio.com/Ibrahim/_git/Ibrahim
+   e088240..edf8fda  master     -> origin/master
+fatal: NullReferenceException encountered.
+   Object reference not set to an instance of an object.
+Username for 'https://team-msc-2018.visualstudio.com': acheneje.ibrahim@yahoo.co.uk
+fatal: NullReferenceException encountered.
+   Object reference not set to an instance of an object.
+From https://team-msc-2018.visualstudio.com/Ibrahim/_git/Ibrahim
+ * branch            master     -> FETCH_HEAD
+Updating e088240..edf8fda
+Fast-forward
+ testing.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+Stella@StellaMarisco MINGW64 ~/source/repos/Ibrahim (master)
+$
+
